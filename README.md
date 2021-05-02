@@ -19,8 +19,6 @@ Correlation matrix was created to summarize large amount of data to see the patt
 
 ![alt text](/Plots/4.png)
 
-![alt text](/Plots/.png)
-
 Pie Charts between attack and protocol, attack and flag, attack and service were created to visualize interaction between them. Clear trend was observed between the protocols and type of attacks. In network traffic analysis, protocol is a simple tool to create some initial buckets to categorize our data. That helps us see that most attacks are going to target a specific protocol. There are several (satan, nmap, ipsweep) that are cross-protocol attacks. And also, icmp data is less frequently found in normal traffic.
 
 ![alt text](/Plots/5.png)
