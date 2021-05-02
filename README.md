@@ -19,6 +19,8 @@ Correlation matrix was created to summarize large amount of data to see the patt
 
 ![alt text](/Plots/4.png)
 
+![alt text](/Plots/.png)
+
 Pie Charts between attack and protocol, attack and flag, attack and service were created to visualize interaction between them. Clear trend was observed between the protocols and type of attacks. In network traffic analysis, protocol is a simple tool to create some initial buckets to categorize our data. That helps us see that most attacks are going to target a specific protocol. There are several (satan, nmap, ipsweep) that are cross-protocol attacks. And also, icmp data is less frequently found in normal traffic.
 
 ![alt text](/Plots/5.png)
@@ -33,25 +35,25 @@ There are a lot of services in the attack set. A huge amount of normal traffic i
 
 # Key Findings
 
-![alt text](/Plots/Multiclass Classification Results.png)
+![alt text](/Plots/Multiclass_Classification_Results.png)
 
 The proposed model provides an average accuracy of 99.22% for the NSL-KDD dataset in multiclass, with the best accuracy of 99.59% for k-value=10. The average Detection Rate is 99.15%, with k-value = 10 yielding the best result of 99.47%. The average FPR percent is 0.0021, with k-value=10 yielding the best value of 0.0013. Model performance for different k-values can be observed in above figure. The proposed model has a high detection rate (DR %) and a low false positive rate (FPR %), which are plotted in below figures for various k-values. The maximum accuracy is 99.59% and the detection rate is 99.47% when k is 10 and correctly so because as the number of folds increases, more samples of each attack/normal class are available for the model to train and thus the model can classify them better.
 
-![alt text](/Plots/Detection Rate Plot.png)
+![alt text](/Plots/Detection_Rate_Plot.png)
 
-![alt text](/Plots/False Positive Rate Plot.png)
+![alt text](/Plots/False_Positive_Rate_Plot.png)
 
 F1-score of each of the 5 classes is plotted in below figure. The model is able to classify Normal, DoS, Probe very accurately. The model has good capability to detect R2L class. F1-score is very less for U2R attack class compared to other classes. This is acceptable since there are very less data points for that class compared to other classes.
 
-![alt text](/Plots/F1-score Plot.png)
+![alt text](/Plots/F1-score_Plot.png)
 
 Below figure depicts the confusion matrix of the best model which is when k = 10. The proposed model was able to classify Normal, DoS, Probe very accurately. U2R class has very less data points compared to others. It has a total of 119 observations which is less than 0.1% of the dataset, out of which 108 were used for used for training and rest 11 were used for testing. This can be observed in the plotted confusion matrix.
 
-![alt text](/Plots/Confusion Matrix.png)
+![alt text](/Plots/Confusion_Matrix.png)
 
 Comparing the proposed model to others such as Logistic Regression, Decision Tree, Random Forest, AdaBoost, and so on. In comparison, it is clear that the proposed model provides significantly better performance across all metrics, including Accuracy, Detection Rate, and False Positive Rate. As a result, the proposed model is more suitable for use in Intrusion Detection Systems. The comparison is given in below figure.
 
-![alt text](/Plots/Comparison with other models.png)
+![alt text](/Plots/Comparison_with_other_models.png)
 
 
 
