@@ -9,6 +9,8 @@ The proposed model in this paper is tested using the NSL-KDD dataset. The Univer
 
 Stratification is the process of rearranging data so that each fold is an accurate representation of the whole. The stratified K-cross fold validation technique divides the dataset into K sets, and the model trains on K-1 folds before being validated on the Kth fold. This is repeated until all of the folds have been used to validate the model. Stratification ensures that each fold is a good representation of the entire dataset, which leads to parameter finetuning and improves the model's ability to classify attacks. The K-cross fold method is preferred over other validation methods because it performs better and requires less computation power.
 
+![alt text](/Users/hemanthkoganti/Network Intrusion Detection System/Plots/2.png)
+
 # Recommendations
 
 There are several ways to improve upon the findings of this project. One way to elaborate on the project's goal would be to include additional data points. And also, Random Oversampling can be used to overcome the problem of imbalanced data. Random oversampling duplicates data points from the minority class at random, reducing data imbalance and improving minority class prediction accuracy. Another recommendation would be to be research on several pre-trained Deep Learning models to find the most accurate model possible. This would make a good candidate for extended deep learning analysis.
