@@ -9,7 +9,26 @@ The proposed model in this paper is tested using the NSL-KDD dataset. The Univer
 
 Stratification is the process of rearranging data so that each fold is an accurate representation of the whole. The stratified K-cross fold validation technique divides the dataset into K sets, and the model trains on K-1 folds before being validated on the Kth fold. This is repeated until all of the folds have been used to validate the model. Stratification ensures that each fold is a good representation of the entire dataset, which leads to parameter finetuning and improves the model's ability to classify attacks. The K-cross fold method is preferred over other validation methods because it performs better and requires less computation power.
 
+Correlation matrix was created to summarize large amount of data to see the patterns. In the NSL-KDD Dataset, most of the variables doesn’t correlate with each other. As evident, very few variables negatively correlate with each other. Figure 3 shows the different types of attacks and the counts of each category of attacks. ‘Normal’ refers to no attack and rest all classes refer to the type of attack. 53.46% of all data points are normal which means those are not attacks and the rest 46.54% are attacks.
+
 ![alt text](/Plots/2.png)
+
+![alt text](/Plots/3.png)
+
+![alt text](/Plots/4.png)
+
+Pie Charts between attack and protocol, attack and flag, attack and service were created to visualize interaction between them. Clear trend was observed between the protocols and type of attacks. In network traffic analysis, protocol is a simple tool to create some initial buckets to categorize our data. That helps us see that most attacks are going to target a specific protocol. There are several (satan, nmap, ipsweep) that are cross-protocol attacks. And also, icmp data is less frequently found in normal traffic.
+
+![alt text](/Plots/5.png)
+
+The thing to notice here is the difference in each protocol type. Initial impression is that protocol may be useful in being able to identify the type of traffic being observed. Let’s see if flag and service behave the same way.
+
+![alt text](/Plots/6.png)
+
+![alt text](/Plots/7.png)
+
+There are a lot of services in the attack set. A huge amount of normal traffic is http whereas attack traffic is all over the place. That is interesting as it means that attacks are searching for many different paths into systems some well-travelled and some not. If this is observed from the eyes of a network administrator, the combination of protocol, flag and service seem like they should tell a lot about the nature of our traffic.
+
 
 # Recommendations
 
